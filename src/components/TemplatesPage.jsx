@@ -6,6 +6,13 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormDataContext } from "../context/FormDataContext";
 
+// import images 
+import templateOne from "/src/assets/templatesImages/templateOne.png";
+import templateTwo from "/src/assets/templatesImages/templateTwo.png";
+import templateThree from "/src/assets/templatesImages/templateThree.png";
+import templateFour from "/src/assets/templatesImages/templateFour.png";
+import templateFive from "/src/assets/templatesImages/templateFive.png";
+
 function TemplatesPage() {
   const { formData } = useContext(FormDataContext);
   const navigate = useNavigate();
@@ -31,27 +38,27 @@ function TemplatesPage() {
   const templates = [
     {
       id: 1,
-      image: "src/assets/templatesImages/templateOne.png",
-    }, // Replace with actual paths
+      image: templateOne,
+    },
     {
       id: 2,
       name: "Spatial Template",
-      image: "src/assets/templatesImages/templateTwo.png",
+      image: templateTwo,
     },
     {
       id: 3,
       name: "Dark Template",
-      image: "src/assets/templatesImages/templateThree.png",
+      image: templateThree,
     },
     {
       id: 4,
       name: "Food Template",
-      image: "src/assets/templatesImages/templateFour.png",
+      image: templateFour,
     },
     {
       id: 5,
       name: "Ecommerce Template",
-      image: "src/assets/templatesImages/templateFive.png",
+      image: templateFive,
     },
   ];
 
