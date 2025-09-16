@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --font-QuickSand: "Quicksand", sans-serif;
+  --font-DmSans: "DM Sans", sans-serif;
+}
+
+/* styling for indicators of slick slider  */
+
+/* all dots (idle state) */
+.my-slick .slick-dots li button:before {
+  color: #9ca3af; /* gray-400 */
+  opacity: 1;
+}
+
+/* active dot */
+.my-slick .slick-dots li.slick-active button:before {
+  color: #f97316; /* orange-500 */
+  opacity: 1;
+}
+
+/* optional: make dots bigger */
+.my-slick .slick-dots li button:before {
+  font-size: 8px;
+}
