@@ -11,6 +11,7 @@ import TemplateTwo from "./templates/TemplateTwo";
 import TemplateThree from "./templates/TemplateThree";
 import TemplateFour from "./templates/TemplateFour";
 import TemplateFive from "./templates/TemplateFive";
+import TemplateSix from "./templates/TemplateSix";
 
 function PreviewPage() {
   const { formData } = useContext(FormDataContext);
@@ -65,6 +66,8 @@ function PreviewPage() {
         return <TemplateFour formData={formData} isPreview={true} />;
       case 5:
         return <TemplateFive formData={formData} isPreview={true} />;
+      case 6:
+        return <TemplateSix formData={formData} isPreview={true} />;
       default:
         return <div className="text-center py-12">Template not found.</div>;
     }
@@ -72,26 +75,29 @@ function PreviewPage() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-QuickSand font-bold text-gray-900 text-center mb-8">
+      <div className=" mx-auto    ">
+        {/* <h1 className="text-4xl font-QuickSand font-bold text-gray-900 text-center mb-8">
           Template Preview
-        </h1>
-        <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-300">
-          {renderTemplate()}
-        </div>
-        <div className="flex justify-between mt-8">
+        </h1> */}
+
+        {renderTemplate()}
+
+        <div className="flex justify-between py-8 max-w-7xl w-full  mx-auto">
           <button
-            onClick={() => navigate("/templates", scrollTo(0, 0))}
-            className="px-6 py-3 bg-gray-200 cursor-pointer text-gray-800 rounded-xl hover:bg-gray-300 transition duration-200 font-semibold"
+            onClick={() => {
+              navigate("/templates");
+              window.scrollTo(0, 0);
+            }}
+            className="px-6 py-3 bg-blue-100 cursor-pointer text-gray-800 rounded-xl hover:bg-blue-300 transition duration-300 font-semibold"
           >
             Back to Templates
           </button>
-          {/* <button
-            onClick={handleGenerate}
-            className="px-6 py-3 bg-emerald-600 cursor-pointer text-white rounded-xl hover:bg-emerald-700 transition duration-200 font-semibold"
+          <button
+            onClick={navigate("/", scrollTo(0, 0))}
+            className="px-6 py-3 bg-green-600 cursor-pointer text-white rounded-xl hover:bg-green-700 transition duration-200 font-semibold"
           >
-            Generate Data
-          </button> */}
+            Goto Home
+          </button>
         </div>
       </div>
     </div>

@@ -11,6 +11,10 @@ import SuccessPage from "./components/SuccessPage";
 
 import AdminHome from "./components/Home";
 import FinalPreviewPage from "./components/FinalPreviewPage";
+import TemplateSix from "./components/TemplateSix";
+import NOETIC from "./components/NOETIC";
+import SliceOfTheMarket from "./components/SliceOfTheMarket";
+import AllProjects from "./components/AllProjects";
 
 function App() {
   const [formData, setFormData] = useState(null);
@@ -25,21 +29,27 @@ function App() {
   }, []);
 
   return (
-    <FormDataContext.Provider value={{ formData, setFormData }}>
-      <Router>
-        <Routes>
-          {/* <Route path="/" element={<AdminHome />} /> */}
-          <Route path="/" element={<StepForm />} />
-          <Route path="/templates" element={<TemplatesPage />} />
-          <Route path="/preview/:templateId" element={<PreviewPage />} />
-          <Route
-            path="/final-preview/:templateId/:userId"
-            element={<FinalPreviewPage />}
-          />
-          <Route path="/success" element={<SuccessPage />} />
-        </Routes>
-      </Router>
-    </FormDataContext.Provider>
+    // <FormDataContext.Provider value={{ formData, setFormData }}>
+    //   <Router>
+    //     <Routes>
+    //       {/* <Route path="/" element={<AdminHome />} /> */}
+    //       {/* <Route path="/" element={<StepForm />} /> */}
+    //       <Route path="/" element={<SliceOfTheMarket />} />
+    //       <Route path="/stepForm" element={<StepForm />} />
+    //       <Route path="/allBusinesses" element={<AllProjects />} />
+    //       <Route path="/templates" element={<TemplatesPage />} />
+    //       <Route path="/preview/:templateId" element={<PreviewPage />} />
+    //       <Route
+    //         path="/final-preview/:templateId/:userId"
+    //         element={<FinalPreviewPage />}
+    //       />
+    //       <Route path="/success" element={<SuccessPage />} />
+    //     </Routes>
+    //   </Router>
+    // </FormDataContext.Provider>
+    // <TemplateSix />
+    <SliceOfTheMarket />
+    // <AllProjects />
   );
 }
 

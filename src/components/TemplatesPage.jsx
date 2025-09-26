@@ -6,12 +6,13 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormDataContext } from "../context/FormDataContext";
 
-// import images 
+// import images
 import templateOne from "/src/assets/templatesImages/templateOne.png";
 import templateTwo from "/src/assets/templatesImages/templateTwo.png";
 import templateThree from "/src/assets/templatesImages/templateThree.png";
 import templateFour from "/src/assets/templatesImages/templateFour.png";
 import templateFive from "/src/assets/templatesImages/templateFive.png";
+import templateSix from "/src/assets/templatesImages/templateSix.png";
 
 function TemplatesPage() {
   const { formData } = useContext(FormDataContext);
@@ -42,23 +43,23 @@ function TemplatesPage() {
     },
     {
       id: 2,
-      name: "Spatial Template",
       image: templateTwo,
     },
     {
       id: 3,
-      name: "Dark Template",
       image: templateThree,
     },
     {
       id: 4,
-      name: "Food Template",
       image: templateFour,
     },
     {
       id: 5,
-      name: "Ecommerce Template",
       image: templateFive,
+    },
+    {
+      id: 6,
+      image: templateSix,
     },
   ];
 
